@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"> <!--external css to define the style for many html pages-->
+<script src="https://cdn.anychart.com/releases/8.7.0/js/anychart-core.min.js"></script>
+<script src="https://cdn.anychart.com/releases/8.7.0/js/anychart-tag-cloud.min.js"></script>
+</head>
+
+<header>
+<p id="marquee" ></p>
+<script type="text/javascript">
+scroll(5);
+    function scroll(pos)
+    {   var txt = "COUNT THE APPEARANCE OF EACH UNIQUE WORD IN THE LYRICS";
+        var output = "";
+        var screen = document.getElementById("marquee");
+        for (var i = 0; i < pos; i++)
+        {output += txt.charAt(i);
+        }
+        output += txt.charAt(pos);
+        screen.innerHTML = output;
+        pos++;
+        if (pos != txt.length)
+        {window.setTimeout(function () { scroll(pos); }, 200);
+        }
+        else
+        {window.setTimeout(function () { scroll(0); }, 5000);
+        }
+    }
+</script>
+</header>
+<hr>
+
+<body>
+<article>
+<h1>LESSONS BY SOHN </h1>
+<div class="textbox">
+<p style="padding:20px; margin:20px; line-height:25px; font-size:25px;">
+  Most frequent words were found using a HashMap in Java program</p>
+</div>
+<div class="description">
+    <p><em>The program:</em></p>
+<p>
+    <ul>
+        <li>
+            asks the user to input a path to a text file
+        </li>
+        <li>
+            reads from the text file
+        </li>
+        <li>
+            captures the data into a HashMap
+        </li>
+        <li>
+            counts the appearance of each unique word in the text file
+        </li>
+        <li>
+            prints out a word frequency list in descending order sorted by number of occurrences in the following format:
+            <li>
+                number of occurrences: word
+            </li>
+        </li>
+    </ul>
+</p>
+
+</div>
+
+<div class="spacer"></div>
+
+<div class="lyrics">
+<h2>Lessons</h2>
+<h2>by SOHN</h2>
+<hr style="margin:0 150px;">
+<div class="spacer"></div>
+<p>
+    Of lessons learned, of lessons learned<br>
+    Of bridges burned, of bridges burned<br>
+    This time I'll do things differently<br>
+    This time I'll act immediately<br>
+    Of struggling, of struggling<br>
+    Of giving in, of giving in<br>
+    This time I'll keep an overview<br>
+    This time I'll keep away from you<br>
+    This time I'll keep away from you<br>
+    Of lessons learned, of lessons learned<br>
+    Of bridges burned, of bridges burned<br>
+    This time I'll do things differently<br>
+    This time I'll act immediately<br>
+    Of struggling, of struggling<br>
+    Of giving in, of giving in<br>
+    This time I'll keep an overview<br>
+    This time I'll keep away from you<br>
+    This time I'll keep away from you<br>
+</p>
+</div>
+<div class="spacer"></div>
+<div class="description">
+    <p>
+        - Punctuation marks are eliminated by applying regular expression "[^a-zA-Z']" to each word.<br>
+        - Stopwords (such as the, a) are filtered out from the analysis. HashSet is used to store string values of stopwords
+        as HashSet offers constant time performance for the basic operation: contains() which is used to identify stop words in the file while 
+        reading it.<br>
+        - Words from the text file are stored in a HashMap where the word is stored as a key and a number of occurences is stored as a value.<br>
+        - Search on a HashMap is O(1), which allows to check if the next word from the file is already in a HashMap in constant time
+        and if yes, increase the number of its occurences.<br>
+        - Keys are not case sensitive.<br>
+        - Word cloud is used as a visual technique to demostrate how often words are mentioned in the text. <br>
+        - Data visualization is done with <a href="https://www.anychart.com/" target="_blank">AnyChart JavaScript charting library.</a>
+    </p>
+</div>
+<div class="spacer"></div>
+</article>
+<div class="spacer"></div>
+<div id="container">
+    <script>     
+    anychart.onDocumentReady(function() {
+    var data = [
+    {"x": "TIME", "value": 10},
+    {"x": "KEEP", "value": 6},
+    {"x": "AWAY", "value": 4},
+    {"x": "LEARNED", "value": 4},
+    {"x": "BRIDGES", "value": 4},
+    {"x": "GIVING", "value": 4,},
+    {"x": "BURNED", "value": 4},
+    {"x": "STRUGGLING", "value": 4},
+    {"x": "LESSONS", "value": 4},
+    {"x": "OVERVIEW", "value": 2},
+    {"x": "IMMEDIATELY", "value": 2},
+    {"x": "ACT", "value": 2},
+    {"x": "DIFFERENTLY", "value": 2},
+    {"x": "THINGS", "value": 2}];
+    // create a tag (word) cloud chart
+    var chart = anychart.tagCloud(data)
+    chart.normal().fontWeight(600)
+    chart.normal({fill: '#AEC1C5'})
+    chart.colorScale(anychart.scales.ordinalColor())
+    // set an array of angles at which the words will be laid out
+    chart.angles([0])
+    chart.colorRange(false)
+    // display the word cloud chart
+    chart.container("container")
+    chart.draw();
+    });
+    </script>
+</div>
+</body>
+</html>
+
+ 

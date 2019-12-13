@@ -1,0 +1,110 @@
+﻿/* reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	background:transparent;}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;}
+
+ html, body, #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	}
+body{background-size: cover;
+     margin:0;
+	 font-family:"Franklin Gothic Medium", Helvetica, Arial, sans-serif;
+	 font-size: 20px;
+     }
+#marquee{font-size:18px;
+		 line-height:100px;
+		 padding: 0;
+		 color:rgb(169,154,125,0.7);
+		 }
+.textbox{background:#AEC1C5; 
+         margin:100px;
+         width:75%;
+         margin:0 auto;
+        }	 
+.textbox p{	line-height:35px;
+			letter-spacing: 0em;
+			padding:20px;
+		  }
+
+h1{ font-size:5rem;
+	line-height:175px;
+	font-weight: bold;
+	color:#3C444F;
+ 	letter-spacing: 0.2em;
+	text-transform: uppercase;
+ 	text-align:center;}
+h2{ font-size:30px;
+	line-height:50px;
+	font-weight: bold;
+	color:rgb(4, 61, 42);
+ 	letter-spacing: 0.2em;
+	text-transform: uppercase;
+ 	text-align:center;}
+
+  p{font-size:25px;
+   text-align:center;
+   color:#E8E7E6;
+   letter-spacing: 0.2em;
+   line-height:45px;
+   font-size: 25px;
+   }
+
+ul {
+   font-size:25px;
+   text-align:center;
+   color:rgb(60,68,79,0.5);
+   letter-spacing: 0.1em;
+   line-height:45px;
+   }
+
+hr  {
+	color:rgb(169,154,125, 0.5);
+	}
+.description {	
+		 		text-align:center;
+         		width:65%;
+         		margin: auto;
+             } 
+.description p, ul {
+  font-size:20px;
+  color: #5A6675;
+  letter-spacing: 0.05em;
+  line-height:40px;
+  text-align:left; 
+  }
+.lyrics{background:rgba(5, 111, 129, 0.7); 
+		padding:30px;	
+		}
+.container{
+	width: 80%;
+    height: 800%;
+    margin: auto;
+	padding: 0;
+}
+.spacer{height:50px;} 
+
