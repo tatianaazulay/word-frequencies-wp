@@ -85,6 +85,9 @@ ul {
 hr  {
 	color:rgb(169,154,125, 0.5);
 	}
+a {
+	color:rgb(169,154,125, 0.7);
+}
 .description {	
 		 		text-align:center;
          		width:65%;
