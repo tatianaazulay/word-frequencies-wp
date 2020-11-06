@@ -1,4 +1,6 @@
-# This is a presentation for word-frequencies java program, which 
+# This is a presentation for a java program, which calculates word frequences in a text.
+Presentation is deployed @ https://tatianaazulay.github.io/word-frequencies-wp/
+# Java program:
 1. asks the user to input a path to a text file
 2. reads from the text file
 3. captures the data into a HashMap
@@ -17,7 +19,7 @@
         - Word cloud is used as a visual technique to demostrate how often words are mentioned in the text. <br>
         - Data visualization is done with <a href="https://www.anychart.com/" target="_blank">AnyChart JavaScript charting library.</a>
     </p><br>
- 
+
  **Sample of input file: song lyrics "Lessons" by Sohn**<br/>
 ![inputFile](https://user-images.githubusercontent.com/41156932/70396525-e5114a00-19d7-11ea-8ea0-879d51559089.jpg)<br/>
  **Sample of output**<br/>
